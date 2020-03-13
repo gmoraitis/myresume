@@ -159,6 +159,73 @@ section.resume-section .resume-item .resume-date {
   }
 }
 
+.projects-item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  max-width: 530px;
+  margin: auto auto 1rem;
+}
+
+.projects-item .caption {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(33, 37, 41, 0.2);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.projects-item .caption .caption-content {
+  color: white;
+  margin: auto 2rem 2rem;
+}
+
+.projects-item .caption .caption-content h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+
+.projects-item .caption .caption-content p {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 992px) {
+  .projects-item {
+    max-width: none;
+    margin: 0;
+  }
+  .projects-item .caption {
+    -webkit-transition: -webkit-clip-path 0.25s ease-out, background-color 0.7s;
+    -webkit-clip-path: inset(0px);
+    clip-path: inset(0px);
+  }
+  .projects-item .caption .caption-content {
+    transition: opacity 0.25s;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+  }
+  .projects-item img {
+    -webkit-transition: -webkit-clip-path 0.25s ease-out;
+    -webkit-clip-path: inset(-1px);
+    clip-path: inset(-1px);
+  }
+  .projects-item:hover img {
+    -webkit-clip-path: inset(2rem);
+    clip-path: inset(2rem);
+  }
+  .projects-item:hover .caption {
+    background-color: rgba(0, 123, 255, 0.9);
+    -webkit-clip-path: inset(2rem);
+    clip-path: inset(2rem);
+  }
+}
+
 .piano_basic {
   min-height: 30rem;
   position: relative;
@@ -167,7 +234,7 @@ section.resume-section .resume-item .resume-date {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), url("../img/basic_piano.jpg");
+  background: linear-gradient(90deg, black 0%, rgba(0, 0, 0, 0.1) 100%), url("../img/basic_piano.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -175,13 +242,14 @@ section.resume-section .resume-item .resume-date {
 
 .piano_basic h1 {
   font-size: 4rem;
+  font-family: sans-serif;
   margin: 0;
   padding: 0;
-  color: #eee6e6;
+  color: whitesmoke;
 }
 
 .piano_basic h3 {
-  color: #eee6e6;
+  color: whitesmoke;
 }
 
 @media (min-width: 992px) {
@@ -195,15 +263,6 @@ section.resume-section .resume-item .resume-date {
 
 *, *::before, *::after {
   box-sizing: border-box;
-}
-
-.body {
-  background-color: #143F6B;
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .piano {
@@ -245,7 +304,7 @@ section.resume-section .resume-item .resume-date {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), url("../img/sampling.jpg");
+  background: linear-gradient(90deg, black 0%, rgba(0, 0, 0, 0.1) 100%), url("../img/sampling.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -313,72 +372,6 @@ section.resume-section .resume-item .resume-date {
 
 .black.active {
   background-color: #333;
-}
-
-.projects-item {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  max-width: 530px;
-  margin: auto auto 1rem;
-}
-
-.projects-item .caption {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(33, 37, 41, 0.2);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-}
-
-.projects-item .caption .caption-content {
-  color: #fff;
-  margin: auto 2rem 2rem;
-}
-
-.projects-item .caption .caption-content h2 {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-}
-
-.projects-item .caption .caption-content p {
-  font-weight: 300;
-  font-size: 1.2rem;
-}
-
-@media (min-width: 992px) {
-  .projects-item {
-    max-width: none;
-    margin: 0;
-  }
-  .projects-item .caption {
-    -webkit-transition: -webkit-clip-path 0.25s ease-out, background-color 0.7s;
-    -webkit-clip-path: inset(0px);
-    clip-path: inset(0px);
-  }
-  .projects-item .caption .caption-content {
-    transition: opacity 0.25s;
-    margin-left: 5rem;
-    margin-right: 5rem;
-    margin-bottom: 5rem;
-  }
-  .projects-item img {
-    -webkit-transition: -webkit-clip-path 0.25s ease-out;
-    -webkit-clip-path: inset(-1px);
-    clip-path: inset(-1px);
-  }
-  .projects-item:hover img {
-    -webkit-clip-path: inset(2rem);
-    clip-path: inset(2rem);
-  }
-  .projects-item:hover .caption {
-    background-color: rgba(0, 123, 255, 0.9);
-    -webkit-clip-path: inset(2rem);
-    clip-path: inset(2rem);
-  }
 }
 
 .bg-primary {
