@@ -1,4 +1,4 @@
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/gmoraitis/myresume/blob/master/img/readme.png)
 
 ## Usage
 
@@ -20,6 +20,5 @@ After installation, run `npm install` and then run `npm start` which will open u
 
 You must have npm installed globally in order to use this build environment.
 
-#### Link
-https://gmoraitis.github.io/myresume/
+
 
