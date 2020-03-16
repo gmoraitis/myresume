@@ -13,8 +13,8 @@ document.getElementById("msInput").addEventListener("input",function(e){
 document.getElementById("cryptInput").addEventListener("input",function(e){
     document.getElementById('cryptOutput').style.visibility = 'visible';
 
-    let ms = e.target.value.split('n,+@,7').reverse()
-    document.getElementById('realOutput').innerText = ms.toString(); 
+    let ms = e.target.value.split('n,+@,7').reverse();
+    document.getElementById('realOutput').innerText = ms.toString().replace(/,/g,"");
 })
 
 
